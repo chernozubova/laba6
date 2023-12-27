@@ -71,7 +71,8 @@ class Ticket:
 
 
 def create_plane():
-    return
+    name = input("Введите авиакомпанию самолета: ")
+    return Plane(name)
 
 
 def create_flight():
@@ -100,7 +101,8 @@ def menu():
         point = input("Выберите пункт меню: ")
 
         if point == "1":
-            pass
+            plane = create_plane()
+            print("Самолет создан")
         elif point == "2":
             pass
         elif point == "3":
