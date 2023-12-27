@@ -81,8 +81,10 @@ def create_flight(plane):
     return Flight(plane, origin, destination)
 
 
-def create_ticket():
-    return
+def create_ticket(plane):
+    origin = input("Введите пункт отправления: ")
+    destination = input("Введите пункт назначения: ")
+    return Flight(plane, origin, destination)
 
 
 def menu():
@@ -112,7 +114,11 @@ def menu():
             else:
                 print("Сначала создайте самолет")
         elif point == "3":
-            pass
+            if flight:
+                ticket = create_ticket(flight)
+                print("Билет создан")
+            else:
+                print("Сначала создайте рейс")
         elif point == "4":
             pass
         elif point == "5":
