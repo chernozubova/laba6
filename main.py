@@ -120,15 +120,25 @@ def menu():
             else:
                 print("Сначала создайте рейс")
         elif point == "4":
-            pass
+            if plane:
+                print(plane)
+            else:
+                print("Сначала создайте самолет")
         elif point == "5":
-            pass
+            if flight:
+                print(flight)
+            else:
+                print("Сначала создайте рейс")
         elif point == "6":
-            pass
+            if ticket:
+                print(ticket)
+            else:
+                print("Сначала создайте билет")
         elif point == "7":
-            pass
+            print("Программа завершена")
+            break
         else:
-            pass
+            print("Выберите верный пункт меню")
 
 
 if __name__ == "main":
