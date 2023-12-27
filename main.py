@@ -19,11 +19,33 @@ class Plane:
 
 
 class Flight:
-    def __init__(self):
-        return
+    def __init__(self, origin, destination, plane):
+        self.__origin = origin
+        self.__destination = destination
+        self.__plane = plane
+        self.__tickets = []
+
+    @property
+    def origin(self):
+        return self.__origin
+
+    @property
+    def destination(self):
+        return self.__destination
+
+    @property
+    def plane(self):
+        return self.__plane
+
+    @property
+    def tickets(self):
+        return self.__tickets
 
     def __str__(self):
-        return
+        return f"Рейс из {self.origin} в {self.destination} на самолете авиакомпании {self.plane.name}"
+
+    def add_ticket(self, ticket):
+        self.__tickets.append(ticket)
 
 
 class Ticket:
