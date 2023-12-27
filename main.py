@@ -49,11 +49,25 @@ class Flight:
 
 
 class Ticket:
-    def __init__(self):
-        return
+    def __init__(self, passenger, seat, flight):
+        self.__passenger = passenger
+        self.__seat = seat
+        self.__flight = flight
+
+    @property
+    def passenger(self):
+        return self.__passenger
+
+    @property
+    def seat(self):
+        return self.__seat
+
+    @property
+    def flight(self):
+        return self.__flight
 
     def __str__(self):
-        return
+        return f"Билет - Пассажир: {self.passenger} Место: {self.seat}"
 
 
 def create_plane():
